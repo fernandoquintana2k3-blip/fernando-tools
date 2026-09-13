@@ -3,196 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Fernando Tools - herramientas gratis para gamers y creadores.">
 <meta name="theme-color" content="#111827">
-<title>Fernando Tools V2</title>
+<title>Fernando Tools</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f1f5f9;
+  color:#111827;
 }
 
-html {
-  scroll-behavior: smooth;
+body.dark{
+  background:#0f172a;
+  color:#f8fafc;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f3f4f6;
-  color: #111827;
-  transition: 0.3s;
+header{
+  background:linear-gradient(135deg,#111827,#2563eb);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
 }
 
-body.dark {
-  background: #0f172a;
-  color: #f8fafc;
+header h1{
+  margin:0;
+  font-size:32px;
 }
 
-header {
-  background: linear-gradient(135deg, #111827, #2563eb);
-  color: white;
-  padding: 28px 18px;
-  text-align: center;
+header p{
+  margin:8px 0 18px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
+.container{
+  width:92%;
+  max-width:900px;
+  margin:25px auto;
 }
 
-header p {
-  margin: 8px 0 18px;
-  opacity: 0.9;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
 }
 
-.top-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+.card{
+  background:white;
+  padding:20px;
+  border-radius:18px;
+  box-shadow:0 8px 25px #00000015;
 }
 
-button {
-  border: 0;
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  background: #2563eb;
-  color: white;
+.dark .card{
+  background:#1e293b;
 }
 
-button:active {
-  transform: scale(0.97);
+h2{
+  text-align:center;
 }
 
-.theme-btn {
-  background: rgba(255,255,255,0.18);
+h3{
+  margin-top:8px;
 }
 
-.container {
-  width: min(1000px, 92%);
-  margin: 25px auto;
+.icon{
+  font-size:38px;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 25px;
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin:6px 0;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+  font-size:16px;
 }
 
-.hero h2 {
-  font-size: 27px;
-  margin-bottom: 8px;
+.dark input,
+.dark select,
+.dark textarea{
+  background:#0f172a;
+  color:white;
+  border-color:#475569;
 }
 
-.hero p {
-  color: #64748b;
+button{
+  width:100%;
+  padding:13px;
+  margin-top:8px;
+  border:0;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
 }
 
-body.dark .hero p {
-  color: #94a3b8;
+.copy{
+  background:#16a34a;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 18px;
+.result{
+  margin-top:12px;
+  padding:14px;
+  border-radius:10px;
+  background:#eff6ff;
+  white-space:pre-wrap;
+  word-break:break-word;
+  min-height:50px;
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+.dark .result{
+  background:#172554;
 }
 
-body.dark .card {
-  background: #1e293b;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+.theme{
+  width:auto;
+  padding:10px 16px;
+  background:#ffffff25;
 }
 
-.card h3 {
-  margin-top: 0;
-  font-size: 21px;
-}
-
-.icon {
-  font-size: 35px;
-  margin-bottom: 5px;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 13px;
-  margin: 7px 0;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  font-size: 15px;
-  background: white;
-  color: #111827;
-}
-
-body.dark input,
-body.dark textarea,
-body.dark select {
-  background: #0f172a;
-  color: white;
-  border-color: #475569;
-}
-
-textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.result {
-  margin-top: 12px;
-  padding: 13px;
-  border-radius: 10px;
-  background: #eff6ff;
-  min-height: 45px;
-  word-wrap: break-word;
-}
-
-body.dark .result {
-  background: #172554;
-}
-
-.copy {
-  margin-top: 8px;
-  background: #16a34a;
-  width: 100%;
-}
-
-footer {
-  text-align: center;
-  padding: 35px 15px;
-  margin-top: 25px;
-  color: #64748b;
-}
-
-body.dark footer {
-  color: #94a3b8;
-}
-
-.small {
-  font-size: 13px;
-}
-
-.ad-box {
-  margin: 22px 0;
-  padding: 20px;
-  border: 2px dashed #cbd5e1;
-  border-radius: 15px;
-  text-align: center;
-  color: #64748b;
-}
-
-body.dark .ad-box {
-  border-color: #475569;
-  color: #94a3b8;
+footer{
+  text-align:center;
+  padding:35px;
+  color:#64748b;
 }
 </style>
 </head>
@@ -200,283 +136,334 @@ body.dark .ad-box {
 <body>
 
 <header>
-  <h1>⚡ Fernando Tools</h1>
-  <p>Herramientas gratis para gamers y creadores</p>
-
-  <div class="top-buttons">
-    <button class="theme-btn" onclick="toggleDark()">🌙 Modo oscuro</button>
-    <button class="theme-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Inicio</button>
-  </div>
+<h1>⚡ Fernando Tools</h1>
+<p>Herramientas gratis para todos</p>
+<button class="theme" onclick="modoOscuro()">🌙 Modo oscuro</button>
 </header>
 
 <div class="container">
 
-  <section class="hero">
-    <h2>🛠️ Tus herramientas gratis</h2>
-    <p>Rápidas, sencillas y pensadas para usar desde el celular.</p>
-  </section>
+<h2>🛠️ Herramientas</h2>
 
-  <div class="ad-box">
-    🚀 ESPACIO PARA PUBLICIDAD
-    <div class="small">Más adelante podremos colocar anuncios aquí.</div>
-  </div>
+<div class="grid">
 
-  <section class="grid">
+<!-- GENERADOR DE NOMBRES -->
 
-    <!-- NOMBRES -->
-    <div class="card">
-      <div class="icon">🎮</div>
-      <h3>Generador de nombres</h3>
-      <p>Crea nombres para juegos y redes.</p>
+<div class="card">
+<div class="icon">🎮</div>
+<h3>Generador de nombres</h3>
+<p>Genera un nombre para juegos o redes.</p>
 
-      <select id="nameStyle">
-        <option value="pro">🔥 Profesional</option>
-        <option value="funny">😂 Divertido</option>
-        <option value="dark">💀 Oscuro</option>
-        <option value="random">🎲 Aleatorio</option>
-      </select>
+<select id="estiloNombre">
+<option value="pro">🔥 Profesional</option>
+<option value="funny">😂 Divertido</option>
+<option value="dark">💀 Oscuro</option>
+</select>
 
-      <button onclick="generateName()">Generar nombre</button>
+<button onclick="crearNombre()">🎲 Crear nombre</button>
 
-      <div class="result" id="nameResult">
-        Tu nombre aparecerá aquí.
-      </div>
+<div class="result" id="nombreResultado">
+Tu nombre aparecerá aquí.
+</div>
 
-      <button class="copy" onclick="copyText('nameResult')">
-        📋 Copiar
-      </button>
-    </div>
+<button class="copy" onclick="copiar('nombreResultado')">
+📋 Copiar nombre
+</button>
+</div>
 
-    <!-- GANANCIAS -->
-    <div class="card">
-      <div class="icon">💰</div>
-      <h3>Calculadora de ganancias</h3>
-      <p>Calcula cuánto ganas después de los gastos.</p>
 
-      <input id="income" type="number" placeholder="Ingresos">
-      <input id="expenses" type="number" placeholder="Gastos">
+<!-- CALCULADORA -->
 
-      <button onclick="calculateProfit()">Calcular</button>
+<div class="card">
+<div class="icon">💰</div>
+<h3>Calculadora de ganancias</h3>
 
-      <div class="result" id="profitResult">
-        Resultado aquí.
-      </div>
-    </div>
+<input id="ingresos" type="number" placeholder="Ingresos">
 
-    <!-- CONTRASEÑA -->
-    <div class="card">
-      <div class="icon">🔐</div>
-      <h3>Generador de contraseñas</h3>
-      <p>Crea una contraseña aleatoria.</p>
+<input id="gastos" type="number" placeholder="Gastos">
 
-      <input id="passLength" type="number" value="12" min="6" max="40">
+<button onclick="calcular()">🧮 Calcular</button>
 
-      <button onclick="generatePassword()">
-        Generar contraseña
-      </button>
+<div class="result" id="gananciaResultado">
+Resultado aquí.
+</div>
+</div>
 
-      <div class="result" id="passwordResult">
-        Tu contraseña aparecerá aquí.
-      </div>
 
-      <button class="copy" onclick="copyText('passwordResult')">
-        📋 Copiar
-      </button>
-    </div>
+<!-- CONTRASEÑA -->
 
-    <!-- ANUNCIOS -->
-    <div class="card">
-      <div class="icon">📝</div>
-      <h3>Generador de anuncios</h3>
-      <p>Crea rápidamente un texto para vender un producto.</p>
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Generador de contraseñas</h3>
 
-      <input id="productName" placeholder="Nombre del producto">
-      <input id="productPrice" placeholder="Precio">
-      <input id="productFeature" placeholder="Característica principal">
+<input id="longitud" type="number" value="12" min="6" max="40">
 
-      <button onclick="generateAd()">
-        Crear anuncio
-      </button>
+<button onclick="crearPassword()">🔐 Crear contraseña</button>
 
-      <div class="result" id="adResult">
-        Tu anuncio aparecerá aquí.
-      </div>
+<div class="result" id="passwordResultado">
+Tu contraseña aparecerá aquí.
+</div>
 
-      <button class="copy" onclick="copyText('adResult')">
-        📋 Copiar
-      </button>
-    </div>
+<button class="copy" onclick="copiar('passwordResultado')">
+📋 Copiar contraseña
+</button>
+</div>
 
-  </section>
 
-  <div class="ad-box">
-    💡 Fernando Tools V2
-    <div class="small">
-      Gratis para todos. Más herramientas próximamente.
-    </div>
-  </div>
+<!-- ANUNCIOS -->
 
+<div class="card">
+<div class="icon">📝</div>
+<h3>Generador de anuncios</h3>
+
+<input id="producto" type="text" placeholder="Nombre del producto">
+
+<input id="precio" type="text" placeholder="Precio">
+
+<input id="caracteristica" type="text" placeholder="Característica del producto">
+
+<button onclick="crearAnuncio()">🔥 Crear anuncio</button>
+
+<div class="result" id="anuncioResultado">
+Escribe los datos de tu producto.
+</div>
+
+<button class="copy" onclick="copiar('anuncioResultado')">
+📋 Copiar anuncio
+</button>
+</div>
+
+</div>
 </div>
 
 <footer>
-  <strong>Fernando Tools</strong>
-  <br>
-  Herramientas gratis para todos.
-  <br><br>
-  <span class="small">© 2026 Fernando Tools</span>
+<strong>Fernando Tools</strong><br>
+Herramientas gratis para todos.<br><br>
+© 2026 Fernando Tools
 </footer>
+
 
 <script>
 
-function toggleDark() {
+/* =========================
+   MODO OSCURO
+========================= */
+
+function modoOscuro(){
+
   document.body.classList.toggle("dark");
 
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("darkMode", "true");
-  } else {
-    localStorage.setItem("darkMode", "false");
-  }
+  localStorage.setItem(
+    "modoOscuro",
+    document.body.classList.contains("dark")
+  );
 }
 
-if (localStorage.getItem("darkMode") === "true") {
+if(localStorage.getItem("modoOscuro")==="true"){
   document.body.classList.add("dark");
 }
 
-function randomItem(array) {
-  return array[Math.floor(Math.random() * array.length)];
+
+/* =========================
+   GENERADOR DE NOMBRES
+========================= */
+
+function aleatorio(lista){
+
+  return lista[
+    Math.floor(Math.random()*lista.length)
+  ];
 }
 
-function generateName() {
+function crearNombre(){
 
-  const style = document.getElementById("nameStyle").value;
+  const estilo =
+    document.getElementById("estiloNombre").value;
 
-  const pro1 = [
-    "Nova", "Blaze", "Titan", "Ghost",
-    "Hunter", "Venom", "Storm", "Wolf"
-  ];
+  let nombres1=[];
+  let nombres2=[];
 
-  const pro2 = [
-    "Max", "X", "Pro", "Elite",
-    "King", "Prime", "Legend", "77"
-  ];
+  if(estilo==="pro"){
 
-  const funny1 = [
-    "Pollo", "Taco", "Gato",
-    "Papa", "Burro", "Pato", "Nacho"
-  ];
+    nombres1=[
+      "Nova","Blaze","Titan","Ghost",
+      "Frost","Storm","Shadow","Hunter"
+    ];
 
-  const funny2 = [
-    "Loco", "Gamer", "Supremo",
-    "Furioso", "Master", "Explosivo"
-  ];
+    nombres2=[
+      "One","X","Pro","Max",
+      "Elite","Prime","77","Zero"
+    ];
 
-  const dark1 = [
-    "Dark", "Death", "Hell",
-    "Demon", "Grim", "Blood", "Night"
-  ];
+  }else if(estilo==="funny"){
 
-  const dark2 = [
-    "Hunter", "Lord", "Soul",
-    "Wolf", "King", "X"
-  ];
+    nombres1=[
+      "Taco","Gato","Pollo","Pato",
+      "Nacho","Papa","Burro"
+    ];
 
-  let name;
+    nombres2=[
+      "Loco","Gamer","Master",
+      "Supremo","Pro","X"
+    ];
 
-  if (style === "pro") {
-    name = randomItem(pro1) + randomItem(pro2);
-  } else if (style === "funny") {
-    name = randomItem(funny1) + randomItem(funny2);
-  } else if (style === "dark") {
-    name = randomItem(dark1) + randomItem(dark2);
-  } else {
-    const all = pro1.concat(funny1).concat(dark1);
-    name = randomItem(all) + randomItem(pro2);
+  }else{
+
+    nombres1=[
+      "Dark","Death","Demon","Grim",
+      "Blood","Night","Hell"
+    ];
+
+    nombres2=[
+      "Lord","Soul","Hunter",
+      "Wolf","King","X"
+    ];
   }
 
-  // Reemplaza el nombre anterior, no lo acumula
-  document.getElementById("nameResult").textContent = name;
+  const nombre =
+    aleatorio(nombres1)+aleatorio(nombres2);
+
+  /*
+  IMPORTANTE:
+  textContent reemplaza completamente
+  el resultado anterior.
+  */
+
+  document.getElementById(
+    "nombreResultado"
+  ).textContent=nombre;
 }
 
-function calculateProfit() {
 
-  const income =
-    parseFloat(document.getElementById("income").value) || 0;
+/* =========================
+   CALCULADORA
+========================= */
 
-  const expenses =
-    parseFloat(document.getElementById("expenses").value) || 0;
+function calcular(){
 
-  const profit = income - expenses;
+  const ingresos=
+    Number(document.getElementById("ingresos").value)||0;
 
-  document.getElementById("profitResult").textContent =
-    "Ganancia: $" + profit.toLocaleString("es-CO") + " COP";
+  const gastos=
+    Number(document.getElementById("gastos").value)||0;
+
+  const resultado=ingresos-gastos;
+
+  document.getElementById(
+    "gananciaResultado"
+  ).textContent=
+    "Ganancia: $"+
+    resultado.toLocaleString("es-CO")+
+    " COP";
 }
 
-function generatePassword() {
 
-  let length =
-    parseInt(document.getElementById("passLength").value) || 12;
+/* =========================
+   CONTRASEÑA
+========================= */
 
-  if (length < 6) length = 6;
-  if (length > 40) length = 40;
+function crearPassword(){
 
-  const chars =
+  let longitud=
+    Number(document.getElementById("longitud").value)||12;
+
+  if(longitud<6) longitud=6;
+  if(longitud>40) longitud=40;
+
+  const caracteres=
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
 
-  let password = "";
+  let password="";
 
-  for (let i = 0; i < length; i++) {
-    password += chars.charAt(
-      Math.floor(Math.random() * chars.length)
-    );
+  for(let i=0;i<longitud;i++){
+
+    password+=caracteres[
+      Math.floor(
+        Math.random()*caracteres.length
+      )
+    ];
   }
 
-  document.getElementById("passwordResult").textContent = password;
+  document.getElementById(
+    "passwordResultado"
+  ).textContent=password;
 }
 
-function generateAd() {
 
-  const product = document.getElementById("productName").value.trim();
-  const price = document.getElementById("productPrice").value.trim();
-  const feature = document.getElementById("productFeature").value.trim();
+/* =========================
+   GENERADOR DE ANUNCIOS
+========================= */
 
-  const result = document.getElementById("adResult");
+function crearAnuncio(){
 
-  if (!product) {
-    result.textContent = "Escribe el nombre del producto.";
+  const producto=
+    document.getElementById("producto").value.trim();
+
+  const precio=
+    document.getElementById("precio").value.trim();
+
+  const caracteristica=
+    document.getElementById("caracteristica").value.trim();
+
+  const resultado=
+    document.getElementById("anuncioResultado");
+
+  if(producto===""){
+
+    resultado.textContent=
+      "⚠️ Primero escribe el nombre del producto.";
+
     return;
   }
 
-  const text =
-`🔥 ¡${product} disponible!
+  let anuncio=
+    "🔥 ¡"+producto+" disponible!\\n\\n";
 
-✨ ${feature || "Excelente opción"}
+  if(caracteristica!==""){
 
-💰 Precio: ${price || "Consultar"}
+    anuncio+=
+      "✨ "+caracteristica+"\\n\\n";
+  }
 
-📩 Escríbeme para más información.
+  if(precio!==""){
 
-🚀 ¡No te quedes sin el tuyo!`;
+    anuncio+=
+      "💰 Precio: "+precio+"\\n\\n";
+  }
 
-  result.textContent = text;
+  anuncio+=
+    "📩 Escríbeme para más información.\\n\\n"+
+    "🚀 ¡No te quedes sin el tuyo!";
+
+  /*
+  IMPORTANTE:
+  textContent reemplaza completamente
+  cualquier resultado anterior.
+  */
+
+  resultado.textContent=anuncio;
 }
 
-function copyText(elementId) {
 
-  const element = document.getElementById(elementId);
-  const text = element.textContent;
+/* =========================
+   COPIAR
+========================= */
 
-  navigator.clipboard.writeText(text).then(() => {
+function copiar(id){
 
-    const oldText = element.textContent;
+  const texto=
+    document.getElementById(id).textContent;
 
-    element.textContent = "✅ ¡Copiado!";
+  navigator.clipboard.writeText(texto)
+  .then(function(){
 
-    setTimeout(() => {
-      element.textContent = oldText;
-    }, 900);
+    alert("✅ Copiado correctamente");
 
-  }).catch(() => {
+  })
+  .catch(function(){
+
     alert("No se pudo copiar automáticamente.");
+
   });
 }
 
