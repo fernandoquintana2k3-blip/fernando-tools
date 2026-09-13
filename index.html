@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernando Tools</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b1020;
+color:white;
+}
+
+header{
+padding:50px 20px;
+text-align:center;
+background:linear-gradient(135deg,#171f46,#392c70);
+}
+
+h1{font-size:42px;margin:10px 0}
+header p{color:#c9c9d8}
+
+main{
+max-width:900px;
+margin:auto;
+padding:30px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.card{
+background:#151c32;
+padding:25px;
+border-radius:18px;
+border:1px solid #293454;
+}
+
+.card h2{margin-top:5px}
+
+button{
+width:100%;
+padding:13px;
+border:0;
+border-radius:10px;
+background:#6c63ff;
+color:white;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:7px 0 12px;
+border-radius:9px;
+border:1px solid #394463;
+background:#090e1c;
+color:white;
+}
+
+.result{
+margin-top:15px;
+padding:15px;
+background:#090e1c;
+border-radius:10px;
+white-space:pre-wrap;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#858da8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ Fernando Tools</h1>
+<p>Herramientas sencillas y gratuitas</p>
+</header>
+
+<main>
+
+<div class="grid">
+
+<div class="card">
+<h2>🎮 Nombres</h2>
+<p>Genera nombres para videojuegos.</p>
+<button onclick="names()">Generar</button>
+<div id="names" class="result">---</div>
+</div>
+
+<div class="card">
+<h2>💰 Ganancias</h2>
+<p>Calcula tu ganancia por venta.</p>
+
+<input id="venta" type="number" placeholder="Precio de venta">
+<input id="costo" type="number" placeholder="Costo">
+
+<button onclick="profit()">Calcular</button>
+
+<div id="profit" class="result">---</div>
+</div>
+
+<div class="card">
+<h2>🔐 Contraseña</h2>
+<p>Genera una contraseña aleatoria.</p>
+<button onclick="password()">Generar</button>
+<div id="password" class="result">---</div>
+</div>
+
+<div class="card">
+<h2>📝 Anuncio</h2>
+
+<input id="producto" placeholder="Nombre del producto">
+<input id="precio" placeholder="Precio">
+
+<button onclick="ad()">Crear anuncio</button>
+
+<div id="ad" class="result">---</div>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 Fernando Tools
+</footer>
+
+<script>
+
+function names(){
+
+let a=[
+"Shadow","Raptor","Ghost","Titan",
+"Viper","Blaze","Frost","Storm",
+"Wolf","Nova"
+];
+
+let b=[
+"X","Pro","77","GT",
+"Max","Fire","One","Dark"
+];
+
+let result="";
+
+for(let i=0;i<10;i++){
+
+let x=a[Math.floor(Math.random()*a.length)];
+let y=b[Math.floor(Math.random()*b.length)];
+
+result+=x+y+"\\n";
+
+}
+
+document.getElementById("names").innerText=result;
+
+}
+
+
+function profit(){
+
+let venta=Number(document.getElementById("venta").value);
+let costo=Number(document.getElementById("costo").value);
+
+if(!venta || !costo){
+
+document.getElementById("profit").innerText=
+"Escribe los dos valores.";
+
+return;
+
+}
+
+let ganancia=venta-costo;
+
+document.getElementById("profit").innerText=
+"Ganancia: $"+ganancia.toLocaleString("es-CO")+" COP";
+
+}
+
+
+function password(){
+
+let chars=
+"ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%";
+
+let p="";
+
+for(let i=0;i<16;i++){
+
+p+=chars[Math.floor(Math.random()*chars.length)];
+
+}
+
+document.getElementById("password").innerText=p;
+
+}
+
+
+function ad(){
+
+let producto=
+document.getElementById("producto").value;
+
+let precio=
+document.getElementById("precio").value;
+
+if(!producto){
+
+document.getElementById("ad").innerText=
+"Escribe un producto.";
+
+return;
+
+}
+
+document.getElementById("ad").innerText=
+"🔥 ¡"+producto+" disponible!\\n\\n"+
+"Excelente opción a solo "+precio+
+". Escríbeme para más información. 📩";
+
+}
+
+</script>
+
+</body>
+</html>
