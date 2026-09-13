@@ -2,133 +2,166 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#111827">
-<title>Fernando Tools</title>
+<meta name="description" content="Fernando Tools - herramientas gratis para gamers, redes y creadores.">
+<title>Fernando Tools V4</title>
 
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f1f5f9;
-  color:#111827;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f1f5f9;
+color:#111827;
 }
 
 body.dark{
-  background:#0f172a;
-  color:#f8fafc;
+background:#0f172a;
+color:#f8fafc;
 }
 
 header{
-  background:linear-gradient(135deg,#111827,#2563eb);
-  color:white;
-  text-align:center;
-  padding:30px 15px;
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:30px 15px;
 }
 
 header h1{
-  margin:0;
-  font-size:32px;
+margin:0;
+font-size:34px;
 }
 
 header p{
-  margin:8px 0 18px;
+margin:8px 0 18px;
 }
 
 .container{
-  width:92%;
-  max-width:900px;
-  margin:25px auto;
+width:92%;
+max-width:1000px;
+margin:25px auto;
+}
+
+.hero{
+text-align:center;
+margin-bottom:25px;
+}
+
+.hero h2{
+font-size:27px;
+}
+
+.hero p{
+color:#64748b;
+}
+
+.dark .hero p{
+color:#94a3b8;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
 }
 
 .card{
-  background:white;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 8px 25px #00000015;
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 8px 25px #00000015;
 }
 
 .dark .card{
-  background:#1e293b;
-}
-
-h2{
-  text-align:center;
-}
-
-h3{
-  margin-top:8px;
+background:#1e293b;
 }
 
 .icon{
-  font-size:38px;
+font-size:38px;
+}
+
+h3{
+margin:8px 0;
 }
 
 input,select,textarea{
-  width:100%;
-  padding:13px;
-  margin:6px 0;
-  border:1px solid #cbd5e1;
-  border-radius:10px;
-  font-size:16px;
+width:100%;
+padding:13px;
+margin:6px 0;
+border:1px solid #cbd5e1;
+border-radius:10px;
+font-size:16px;
 }
 
 .dark input,
 .dark select,
 .dark textarea{
-  background:#0f172a;
-  color:white;
-  border-color:#475569;
+background:#0f172a;
+color:white;
+border-color:#475569;
 }
 
 button{
-  width:100%;
-  padding:13px;
-  margin-top:8px;
-  border:0;
-  border-radius:10px;
-  background:#2563eb;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
+width:100%;
+padding:13px;
+margin-top:8px;
+border:0;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-size:16px;
+font-weight:bold;
+}
+
+button:active{
+transform:scale(.98);
 }
 
 .copy{
-  background:#16a34a;
-}
-
-.result{
-  margin-top:12px;
-  padding:14px;
-  border-radius:10px;
-  background:#eff6ff;
-  white-space:pre-wrap;
-  word-break:break-word;
-  min-height:50px;
-}
-
-.dark .result{
-  background:#172554;
+background:#16a34a;
 }
 
 .theme{
-  width:auto;
-  padding:10px 16px;
-  background:#ffffff25;
+width:auto;
+padding:10px 16px;
+background:#ffffff25;
+}
+
+.result{
+margin-top:12px;
+padding:14px;
+border-radius:10px;
+background:#eff6ff;
+white-space:pre-wrap;
+word-break:break-word;
+min-height:50px;
+}
+
+.dark .result{
+background:#172554;
+}
+
+.adbox{
+margin:20px 0;
+padding:20px;
+border:2px dashed #cbd5e1;
+border-radius:15px;
+text-align:center;
+color:#64748b;
+}
+
+.dark .adbox{
+border-color:#475569;
+color:#94a3b8;
 }
 
 footer{
-  text-align:center;
-  padding:35px;
-  color:#64748b;
+text-align:center;
+padding:35px;
+color:#64748b;
 }
 </style>
 </head>
@@ -137,22 +170,30 @@ footer{
 
 <header>
 <h1>⚡ Fernando Tools</h1>
-<p>Herramientas gratis para todos</p>
+<p>Herramientas gratis para gamers, redes y creadores</p>
 <button class="theme" onclick="modoOscuro()">🌙 Modo oscuro</button>
 </header>
 
 <div class="container">
 
-<h2>🛠️ Herramientas</h2>
+<div class="hero">
+<h2>🛠️ Herramientas gratis</h2>
+<p>Rápidas, sencillas y pensadas para usar desde Android.</p>
+</div>
+
+<div class="adbox">
+🚀 ESPACIO PARA PUBLICIDAD
+<br>
+Pequeño espacio reservado para futuros anuncios.
+</div>
 
 <div class="grid">
 
-<!-- GENERADOR DE NOMBRES -->
-
+<!-- NOMBRES -->
 <div class="card">
 <div class="icon">🎮</div>
 <h3>Generador de nombres</h3>
-<p>Genera un nombre para juegos o redes.</p>
+<p>Crea nombres para juegos y redes.</p>
 
 <select id="estiloNombre">
 <option value="pro">🔥 Profesional</option>
@@ -167,13 +208,92 @@ Tu nombre aparecerá aquí.
 </div>
 
 <button class="copy" onclick="copiar('nombreResultado')">
-📋 Copiar nombre
+📋 Copiar
+</button>
+</div>
+
+
+<!-- FREE FIRE -->
+<div class="card">
+<div class="icon">🔥</div>
+<h3>Nombres para Free Fire</h3>
+<p>Genera nombres con estilo gamer.</p>
+
+<button onclick="crearFreeFire()">🔥 Crear nombre</button>
+
+<div class="result" id="freefireResultado">
+Tu nombre aparecerá aquí.
+</div>
+
+<button class="copy" onclick="copiar('freefireResultado')">
+📋 Copiar
+</button>
+</div>
+
+
+<!-- TIKTOK -->
+<div class="card">
+<div class="icon">🎵</div>
+<h3>Nombre para TikTok</h3>
+<p>Crea ideas para tu usuario.</p>
+
+<input id="temaTikTok" placeholder="Ej: gaming">
+
+<button onclick="crearTikTok()">✨ Crear usuario</button>
+
+<div class="result" id="tiktokResultado">
+Tu usuario aparecerá aquí.
+</div>
+
+<button class="copy" onclick="copiar('tiktokResultado')">
+📋 Copiar
+</button>
+</div>
+
+
+<!-- BIO -->
+<div class="card">
+<div class="icon">📱</div>
+<h3>Generador de biografías</h3>
+<p>Crea una bio para tus redes.</p>
+
+<select id="tipoBio">
+<option value="gamer">🎮 Gamer</option>
+<option value="creator">🎥 Creador</option>
+<option value="motivacion">🔥 Motivación</option>
+</select>
+
+<button onclick="crearBio()">✨ Crear bio</button>
+
+<div class="result" id="bioResultado">
+Tu bio aparecerá aquí.
+</div>
+
+<button class="copy" onclick="copiar('bioResultado')">
+📋 Copiar
+</button>
+</div>
+
+
+<!-- FRASES -->
+<div class="card">
+<div class="icon">💬</div>
+<h3>Frases para estados</h3>
+<p>Genera una frase rápida.</p>
+
+<button onclick="crearFrase()">💬 Crear frase</button>
+
+<div class="result" id="fraseResultado">
+Tu frase aparecerá aquí.
+</div>
+
+<button class="copy" onclick="copiar('fraseResultado')">
+📋 Copiar
 </button>
 </div>
 
 
 <!-- CALCULADORA -->
-
 <div class="card">
 <div class="icon">💰</div>
 <h3>Calculadora de ganancias</h3>
@@ -182,7 +302,7 @@ Tu nombre aparecerá aquí.
 
 <input id="gastos" type="number" placeholder="Gastos">
 
-<button onclick="calcular()">🧮 Calcular</button>
+<button onclick="calcularGanancia()">🧮 Calcular</button>
 
 <div class="result" id="gananciaResultado">
 Resultado aquí.
@@ -190,8 +310,24 @@ Resultado aquí.
 </div>
 
 
-<!-- CONTRASEÑA -->
+<!-- PORCENTAJE -->
+<div class="card">
+<div class="icon">📊</div>
+<h3>Calculadora de porcentaje</h3>
 
+<input id="numeroPorcentaje" type="number" placeholder="Número">
+
+<input id="porcentaje" type="number" placeholder="Porcentaje">
+
+<button onclick="calcularPorcentaje()">📊 Calcular</button>
+
+<div class="result" id="porcentajeResultado">
+Resultado aquí.
+</div>
+</div>
+
+
+<!-- CONTRASEÑA -->
 <div class="card">
 <div class="icon">🔐</div>
 <h3>Generador de contraseñas</h3>
@@ -205,35 +341,41 @@ Tu contraseña aparecerá aquí.
 </div>
 
 <button class="copy" onclick="copiar('passwordResultado')">
-📋 Copiar contraseña
+📋 Copiar
 </button>
 </div>
 
 
-<!-- ANUNCIOS -->
-
+<!-- ANUNCIO -->
 <div class="card">
 <div class="icon">📝</div>
 <h3>Generador de anuncios</h3>
 
-<input id="producto" type="text" placeholder="Nombre del producto">
+<input id="producto" placeholder="Nombre del producto">
 
-<input id="precio" type="text" placeholder="Precio">
+<input id="precio" placeholder="Precio">
 
-<input id="caracteristica" type="text" placeholder="Característica del producto">
+<input id="caracteristica" placeholder="Característica">
 
 <button onclick="crearAnuncio()">🔥 Crear anuncio</button>
 
 <div class="result" id="anuncioResultado">
-Escribe los datos de tu producto.
+Escribe los datos del producto.
 </div>
 
 <button class="copy" onclick="copiar('anuncioResultado')">
-📋 Copiar anuncio
+📋 Copiar
 </button>
 </div>
 
 </div>
+
+<div class="adbox">
+💡 Fernando Tools V4
+<br>
+Más herramientas próximamente.
+</div>
+
 </div>
 
 <footer>
@@ -245,226 +387,345 @@ Herramientas gratis para todos.<br><br>
 
 <script>
 
-/* =========================
-   MODO OSCURO
-========================= */
+function aleatorio(lista){
+return lista[Math.floor(Math.random()*lista.length)];
+}
+
+
+/* MODO OSCURO */
 
 function modoOscuro(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "modoOscuro",
-    document.body.classList.contains("dark")
-  );
+localStorage.setItem(
+"modoOscuro",
+document.body.classList.contains("dark")
+);
+
 }
 
 if(localStorage.getItem("modoOscuro")==="true"){
-  document.body.classList.add("dark");
+document.body.classList.add("dark");
 }
 
 
-/* =========================
-   GENERADOR DE NOMBRES
-========================= */
-
-function aleatorio(lista){
-
-  return lista[
-    Math.floor(Math.random()*lista.length)
-  ];
-}
+/* NOMBRES */
 
 function crearNombre(){
 
-  const estilo =
-    document.getElementById("estiloNombre").value;
+const estilo=document.getElementById("estiloNombre").value;
 
-  let nombres1=[];
-  let nombres2=[];
+let a=[];
+let b=[];
 
-  if(estilo==="pro"){
+if(estilo==="pro"){
 
-    nombres1=[
-      "Nova","Blaze","Titan","Ghost",
-      "Frost","Storm","Shadow","Hunter"
-    ];
+a=["Nova","Blaze","Titan","Ghost","Frost","Storm","Shadow","Hunter"];
+b=["One","X","Pro","Max","Elite","Prime","77","Zero"];
 
-    nombres2=[
-      "One","X","Pro","Max",
-      "Elite","Prime","77","Zero"
-    ];
+}
 
-  }else if(estilo==="funny"){
+else if(estilo==="funny"){
 
-    nombres1=[
-      "Taco","Gato","Pollo","Pato",
-      "Nacho","Papa","Burro"
-    ];
+a=["Taco","Gato","Pollo","Pato","Nacho","Papa","Burro"];
+b=["Loco","Gamer","Master","Supremo","Pro","X"];
 
-    nombres2=[
-      "Loco","Gamer","Master",
-      "Supremo","Pro","X"
-    ];
+}
 
-  }else{
+else{
 
-    nombres1=[
-      "Dark","Death","Demon","Grim",
-      "Blood","Night","Hell"
-    ];
+a=["Dark","Death","Demon","Grim","Blood","Night","Hell"];
+b=["Lord","Soul","Hunter","Wolf","King","X"];
 
-    nombres2=[
-      "Lord","Soul","Hunter",
-      "Wolf","King","X"
-    ];
-  }
+}
 
-  const nombre =
-    aleatorio(nombres1)+aleatorio(nombres2);
+document.getElementById("nombreResultado").textContent=
+aleatorio(a)+aleatorio(b);
 
-  /*
-  IMPORTANTE:
-  textContent reemplaza completamente
-  el resultado anterior.
-  */
-
-  document.getElementById(
-    "nombreResultado"
-  ).textContent=nombre;
 }
 
 
-/* =========================
-   CALCULADORA
-========================= */
+/* FREE FIRE */
 
-function calcular(){
+function crearFreeFire(){
 
-  const ingresos=
-    Number(document.getElementById("ingresos").value)||0;
+const a=[
+"亗","乂","メ","么","ツ","〆","々"
+];
 
-  const gastos=
-    Number(document.getElementById("gastos").value)||0;
+const nombres=[
+"Shadow","Blaze","Ghost","Fenix",
+"Dark","Hunter","Wolf","Titan",
+"Venom","Storm"
+];
 
-  const resultado=ingresos-gastos;
+const numeros=[
+"7","77","99","YT","FF","X"
+];
 
-  document.getElementById(
-    "gananciaResultado"
-  ).textContent=
-    "Ganancia: $"+
-    resultado.toLocaleString("es-CO")+
-    " COP";
+const resultado=
+aleatorio(a)+
+aleatorio(nombres)+
+aleatorio(numeros)+
+aleatorio(a);
+
+document.getElementById(
+"freefireResultado"
+).textContent=resultado;
+
 }
 
 
-/* =========================
-   CONTRASEÑA
-========================= */
+/* TIKTOK */
+
+function crearTikTok(){
+
+let tema=
+document.getElementById("temaTikTok").value.trim();
+
+if(tema===""){
+tema="gamer";
+}
+
+const opciones=[
+tema+"X",
+tema+"Pro",
+"Soy"+tema,
+tema+"77",
+"Real"+tema,
+"El"+tema,
+tema+"Official",
+tema+"Max"
+];
+
+document.getElementById(
+"tiktokResultado"
+).textContent=
+aleatorio(opciones);
+
+}
+
+
+/* BIO */
+
+function crearBio(){
+
+const tipo=
+document.getElementById("tipoBio").value;
+
+let bio;
+
+if(tipo==="gamer"){
+
+bio=
+"🎮 Gamer | 🎯 Siempre mejorando\n"+
+"🔥 Jugando y disfrutando\n"+
+"🏆 Próximo nivel";
+
+}
+
+else if(tipo==="creator"){
+
+bio=
+"🎥 Creando contenido\n"+
+"🚀 Construyendo algo grande\n"+
+"📲 Sígueme para más";
+
+}
+
+else{
+
+bio=
+"🔥 Nunca rendirse\n"+
+"💪 Un día a la vez\n"+
+"🚀 Vamos por más";
+
+}
+
+document.getElementById(
+"bioResultado"
+).textContent=bio;
+
+}
+
+
+/* FRASES */
+
+function crearFrase(){
+
+const frases=[
+
+"🔥 El esfuerzo de hoy construye el éxito de mañana.",
+
+"🚀 Poco a poco, pero siempre avanzando.",
+
+"💪 No necesitas ser perfecto, necesitas comenzar.",
+
+"🎯 Enfócate en tu objetivo.",
+
+"⚡ Hazlo realidad.",
+
+"🏆 Nunca te rindas.",
+
+"🔥 Tu mejor versión todavía está por llegar."
+
+];
+
+document.getElementById(
+"fraseResultado"
+).textContent=
+aleatorio(frases);
+
+}
+
+
+/* GANANCIAS */
+
+function calcularGanancia(){
+
+const ingresos=
+Number(document.getElementById("ingresos").value)||0;
+
+const gastos=
+Number(document.getElementById("gastos").value)||0;
+
+const resultado=ingresos-gastos;
+
+document.getElementById(
+"gananciaResultado"
+).textContent=
+"Ganancia: $"+
+resultado.toLocaleString("es-CO")+
+" COP";
+
+}
+
+
+/* PORCENTAJE */
+
+function calcularPorcentaje(){
+
+const numero=
+Number(document.getElementById("numeroPorcentaje").value)||0;
+
+const porcentaje=
+Number(document.getElementById("porcentaje").value)||0;
+
+const resultado=
+numero*(porcentaje/100);
+
+document.getElementById(
+"porcentajeResultado"
+).textContent=
+porcentaje+"% de "+
+numero+
+" = "+
+resultado;
+
+}
+
+
+/* PASSWORD */
 
 function crearPassword(){
 
-  let longitud=
-    Number(document.getElementById("longitud").value)||12;
+let longitud=
+Number(document.getElementById("longitud").value)||12;
 
-  if(longitud<6) longitud=6;
-  if(longitud>40) longitud=40;
+if(longitud<6)longitud=6;
+if(longitud>40)longitud=40;
 
-  const caracteres=
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
+const caracteres=
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
 
-  let password="";
+let password="";
 
-  for(let i=0;i<longitud;i++){
+for(let i=0;i<longitud;i++){
 
-    password+=caracteres[
-      Math.floor(
-        Math.random()*caracteres.length
-      )
-    ];
-  }
+password+=caracteres[
+Math.floor(Math.random()*caracteres.length)
+];
 
-  document.getElementById(
-    "passwordResultado"
-  ).textContent=password;
+}
+
+document.getElementById(
+"passwordResultado"
+).textContent=password;
+
 }
 
 
-/* =========================
-   GENERADOR DE ANUNCIOS
-========================= */
+/* ANUNCIO */
 
 function crearAnuncio(){
 
-  const producto=
-    document.getElementById("producto").value.trim();
+const producto=
+document.getElementById("producto").value.trim();
 
-  const precio=
-    document.getElementById("precio").value.trim();
+const precio=
+document.getElementById("precio").value.trim();
 
-  const caracteristica=
-    document.getElementById("caracteristica").value.trim();
+const caracteristica=
+document.getElementById("caracteristica").value.trim();
 
-  const resultado=
-    document.getElementById("anuncioResultado");
+const resultado=
+document.getElementById("anuncioResultado");
 
-  if(producto===""){
+if(producto===""){
 
-    resultado.textContent=
-      "⚠️ Primero escribe el nombre del producto.";
+resultado.textContent=
+"⚠️ Escribe primero el nombre del producto.";
 
-    return;
-  }
+return;
 
-  let anuncio=
-    "🔥 ¡"+producto+" disponible!\\n\\n";
+}
 
-  if(caracteristica!==""){
+let anuncio=
+"🔥 ¡"+producto+" disponible!\\n\\n";
 
-    anuncio+=
-      "✨ "+caracteristica+"\\n\\n";
-  }
+if(caracteristica!==""){
 
-  if(precio!==""){
+anuncio+=
+"✨ "+caracteristica+"\\n\\n";
 
-    anuncio+=
-      "💰 Precio: "+precio+"\\n\\n";
-  }
+}
 
-  anuncio+=
-    "📩 Escríbeme para más información.\\n\\n"+
-    "🚀 ¡No te quedes sin el tuyo!";
+if(precio!==""){
 
-  /*
-  IMPORTANTE:
-  textContent reemplaza completamente
-  cualquier resultado anterior.
-  */
+anuncio+=
+"💰 Precio: "+precio+"\\n\\n";
 
-  resultado.textContent=anuncio;
+}
+
+anuncio+=
+"📩 Escríbeme para más información.\\n\\n"+
+"🚀 ¡No te quedes sin el tuyo!";
+
+resultado.textContent=anuncio;
+
 }
 
 
-/* =========================
-   COPIAR
-========================= */
+/* COPIAR */
 
 function copiar(id){
 
-  const texto=
-    document.getElementById(id).textContent;
+const texto=
+document.getElementById(id).textContent;
 
-  navigator.clipboard.writeText(texto)
-  .then(function(){
+navigator.clipboard.writeText(texto)
+.then(function(){
 
-    alert("✅ Copiado correctamente");
+alert("✅ Copiado correctamente");
 
-  })
-  .catch(function(){
+})
+.catch(function(){
 
-    alert("No se pudo copiar automáticamente.");
+alert("No se pudo copiar automáticamente.");
 
-  });
+});
+
 }
 
 </script>
