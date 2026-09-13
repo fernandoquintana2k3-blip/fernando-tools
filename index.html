@@ -351,84 +351,49 @@ function generateName() {
   const style = document.getElementById("nameStyle").value;
 
   const pro1 = [
-    "Shadow",
-    "Fenix",
-    "Titan",
-    "Ghost",
-    "Hunter",
-    "Venom",
-    "Storm",
-    "Wolf"
+    "Nova", "Blaze", "Titan", "Ghost",
+    "Hunter", "Venom", "Storm", "Wolf"
   ];
 
   const pro2 = [
-    "X",
-    "Pro",
-    "Elite",
-    "King",
-    "Prime",
-    "Legend",
-    "Zero",
-    "77"
+    "Max", "X", "Pro", "Elite",
+    "King", "Prime", "Legend", "77"
   ];
 
   const funny1 = [
-    "Pollo",
-    "Taco",
-    "Gato",
-    "Papa",
-    "Burro",
-    "Pato",
-    "Nacho"
+    "Pollo", "Taco", "Gato",
+    "Papa", "Burro", "Pato", "Nacho"
   ];
 
   const funny2 = [
-    "Loco",
-    "Gamer",
-    "Supremo",
-    "Furioso",
-    "Master",
-    "Explosivo"
+    "Loco", "Gamer", "Supremo",
+    "Furioso", "Master", "Explosivo"
   ];
 
   const dark1 = [
-    "Dark",
-    "Death",
-    "Hell",
-    "Demon",
-    "Grim",
-    "Blood",
-    "Night"
+    "Dark", "Death", "Hell",
+    "Demon", "Grim", "Blood", "Night"
   ];
 
   const dark2 = [
-    "Hunter",
-    "Lord",
-    "Soul",
-    "Wolf",
-    "King",
-    "X"
+    "Hunter", "Lord", "Soul",
+    "Wolf", "King", "X"
   ];
 
   let name;
 
   if (style === "pro") {
     name = randomItem(pro1) + randomItem(pro2);
-  }
-
-  if (style === "funny") {
+  } else if (style === "funny") {
     name = randomItem(funny1) + randomItem(funny2);
-  }
-
-  if (style === "dark") {
+  } else if (style === "dark") {
     name = randomItem(dark1) + randomItem(dark2);
-  }
-
-  if (style === "random") {
+  } else {
     const all = pro1.concat(funny1).concat(dark1);
     name = randomItem(all) + randomItem(pro2);
   }
 
+  // Reemplaza el nombre anterior, no lo acumula
   document.getElementById("nameResult").textContent = name;
 }
 
@@ -470,35 +435,29 @@ function generatePassword() {
 
 function generateAd() {
 
-  const product =
-    document.getElementById("productName").value.trim();
+  const product = document.getElementById("productName").value.trim();
+  const price = document.getElementById("productPrice").value.trim();
+  const feature = document.getElementById("productFeature").value.trim();
 
-  const price =
-    document.getElementById("productPrice").value.trim();
-
-  const feature =
-    document.getElementById("productFeature").value.trim();
+  const result = document.getElementById("adResult");
 
   if (!product) {
-    document.getElementById("adResult").textContent =
-      "Escribe el nombre del producto.";
+    result.textContent = "Escribe el nombre del producto.";
     return;
   }
 
   const text =
-`🔥 ¡OFERTA ESPECIAL!
+`🔥 ¡${product} disponible!
 
-🛍️ ${product}
-
-✨ ${feature || "Excelente calidad"}
+✨ ${feature || "Excelente opción"}
 
 💰 Precio: ${price || "Consultar"}
 
-📲 ¡Escríbeme ahora y consigue el tuyo!
+📩 Escríbeme para más información.
 
-🚀 ¡No te quedes sin él!`;
+🚀 ¡No te quedes sin el tuyo!`;
 
-  document.getElementById("adResult").textContent = text;
+  result.textContent = text;
 }
 
 function copyText(elementId) {
