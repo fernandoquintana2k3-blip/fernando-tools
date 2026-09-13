@@ -3,82 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fernando Tools</title>
+<meta name="description" content="Fernando Tools - herramientas gratis para gamers y creadores.">
+<meta name="theme-color" content="#111827">
+<title>Fernando Tools V2</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b1020;
-color:white;
+* {
+  box-sizing: border-box;
 }
 
-header{
-padding:50px 20px;
-text-align:center;
-background:linear-gradient(135deg,#171f46,#392c70);
+html {
+  scroll-behavior: smooth;
 }
 
-h1{font-size:42px;margin:10px 0}
-header p{color:#c9c9d8}
-
-main{
-max-width:900px;
-margin:auto;
-padding:30px 20px;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  transition: 0.3s;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
+body.dark {
+  background: #0f172a;
+  color: #f8fafc;
 }
 
-.card{
-background:#151c32;
-padding:25px;
-border-radius:18px;
-border:1px solid #293454;
+header {
+  background: linear-gradient(135deg, #111827, #2563eb);
+  color: white;
+  padding: 28px 18px;
+  text-align: center;
 }
 
-.card h2{margin-top:5px}
-
-button{
-width:100%;
-padding:13px;
-border:0;
-border-radius:10px;
-background:#6c63ff;
-color:white;
-font-weight:bold;
-font-size:16px;
-cursor:pointer;
+header h1 {
+  margin: 0;
+  font-size: 32px;
 }
 
-input{
-width:100%;
-padding:12px;
-margin:7px 0 12px;
-border-radius:9px;
-border:1px solid #394463;
-background:#090e1c;
-color:white;
+header p {
+  margin: 8px 0 18px;
+  opacity: 0.9;
 }
 
-.result{
-margin-top:15px;
-padding:15px;
-background:#090e1c;
-border-radius:10px;
-white-space:pre-wrap;
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#858da8;
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.theme-btn {
+  background: rgba(255,255,255,0.18);
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 25px auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.hero h2 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #64748b;
+}
+
+body.dark .hero p {
+  color: #94a3b8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+body.dark .card {
+  background: #1e293b;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 21px;
+}
+
+.icon {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 13px;
+  margin: 7px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  color: #111827;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #0f172a;
+  color: white;
+  border-color: #475569;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.result {
+  margin-top: 12px;
+  padding: 13px;
+  border-radius: 10px;
+  background: #eff6ff;
+  min-height: 45px;
+  word-wrap: break-word;
+}
+
+body.dark .result {
+  background: #172554;
+}
+
+.copy {
+  margin-top: 8px;
+  background: #16a34a;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 25px;
+  color: #64748b;
+}
+
+body.dark footer {
+  color: #94a3b8;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.ad-box {
+  margin: 22px 0;
+  padding: 20px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 15px;
+  text-align: center;
+  color: #64748b;
+}
+
+body.dark .ad-box {
+  border-color: #475569;
+  color: #94a3b8;
 }
 </style>
 </head>
@@ -86,152 +200,325 @@ color:#858da8;
 <body>
 
 <header>
-<h1>⚡ Fernando Tools</h1>
-<p>Herramientas sencillas y gratuitas</p>
+  <h1>⚡ Fernando Tools</h1>
+  <p>Herramientas gratis para gamers y creadores</p>
+
+  <div class="top-buttons">
+    <button class="theme-btn" onclick="toggleDark()">🌙 Modo oscuro</button>
+    <button class="theme-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Inicio</button>
+  </div>
 </header>
 
-<main>
+<div class="container">
 
-<div class="grid">
+  <section class="hero">
+    <h2>🛠️ Tus herramientas gratis</h2>
+    <p>Rápidas, sencillas y pensadas para usar desde el celular.</p>
+  </section>
 
-<div class="card">
-<h2>🎮 Nombres</h2>
-<p>Genera nombres para videojuegos.</p>
-<button onclick="names()">Generar</button>
-<div id="names" class="result">---</div>
+  <div class="ad-box">
+    🚀 ESPACIO PARA PUBLICIDAD
+    <div class="small">Más adelante podremos colocar anuncios aquí.</div>
+  </div>
+
+  <section class="grid">
+
+    <!-- NOMBRES -->
+    <div class="card">
+      <div class="icon">🎮</div>
+      <h3>Generador de nombres</h3>
+      <p>Crea nombres para juegos y redes.</p>
+
+      <select id="nameStyle">
+        <option value="pro">🔥 Profesional</option>
+        <option value="funny">😂 Divertido</option>
+        <option value="dark">💀 Oscuro</option>
+        <option value="random">🎲 Aleatorio</option>
+      </select>
+
+      <button onclick="generateName()">Generar nombre</button>
+
+      <div class="result" id="nameResult">
+        Tu nombre aparecerá aquí.
+      </div>
+
+      <button class="copy" onclick="copyText('nameResult')">
+        📋 Copiar
+      </button>
+    </div>
+
+    <!-- GANANCIAS -->
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>Calculadora de ganancias</h3>
+      <p>Calcula cuánto ganas después de los gastos.</p>
+
+      <input id="income" type="number" placeholder="Ingresos">
+      <input id="expenses" type="number" placeholder="Gastos">
+
+      <button onclick="calculateProfit()">Calcular</button>
+
+      <div class="result" id="profitResult">
+        Resultado aquí.
+      </div>
+    </div>
+
+    <!-- CONTRASEÑA -->
+    <div class="card">
+      <div class="icon">🔐</div>
+      <h3>Generador de contraseñas</h3>
+      <p>Crea una contraseña aleatoria.</p>
+
+      <input id="passLength" type="number" value="12" min="6" max="40">
+
+      <button onclick="generatePassword()">
+        Generar contraseña
+      </button>
+
+      <div class="result" id="passwordResult">
+        Tu contraseña aparecerá aquí.
+      </div>
+
+      <button class="copy" onclick="copyText('passwordResult')">
+        📋 Copiar
+      </button>
+    </div>
+
+    <!-- ANUNCIOS -->
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>Generador de anuncios</h3>
+      <p>Crea rápidamente un texto para vender un producto.</p>
+
+      <input id="productName" placeholder="Nombre del producto">
+      <input id="productPrice" placeholder="Precio">
+      <input id="productFeature" placeholder="Característica principal">
+
+      <button onclick="generateAd()">
+        Crear anuncio
+      </button>
+
+      <div class="result" id="adResult">
+        Tu anuncio aparecerá aquí.
+      </div>
+
+      <button class="copy" onclick="copyText('adResult')">
+        📋 Copiar
+      </button>
+    </div>
+
+  </section>
+
+  <div class="ad-box">
+    💡 Fernando Tools V2
+    <div class="small">
+      Gratis para todos. Más herramientas próximamente.
+    </div>
+  </div>
+
 </div>
-
-<div class="card">
-<h2>💰 Ganancias</h2>
-<p>Calcula tu ganancia por venta.</p>
-
-<input id="venta" type="number" placeholder="Precio de venta">
-<input id="costo" type="number" placeholder="Costo">
-
-<button onclick="profit()">Calcular</button>
-
-<div id="profit" class="result">---</div>
-</div>
-
-<div class="card">
-<h2>🔐 Contraseña</h2>
-<p>Genera una contraseña aleatoria.</p>
-<button onclick="password()">Generar</button>
-<div id="password" class="result">---</div>
-</div>
-
-<div class="card">
-<h2>📝 Anuncio</h2>
-
-<input id="producto" placeholder="Nombre del producto">
-<input id="precio" placeholder="Precio">
-
-<button onclick="ad()">Crear anuncio</button>
-
-<div id="ad" class="result">---</div>
-</div>
-
-</div>
-
-</main>
 
 <footer>
-© 2026 Fernando Tools
+  <strong>Fernando Tools</strong>
+  <br>
+  Herramientas gratis para todos.
+  <br><br>
+  <span class="small">© 2026 Fernando Tools</span>
 </footer>
 
 <script>
 
-function names(){
+function toggleDark() {
+  document.body.classList.toggle("dark");
 
-let a=[
-"Shadow","Raptor","Ghost","Titan",
-"Viper","Blaze","Frost","Storm",
-"Wolf","Nova"
-];
-
-let b=[
-"X","Pro","77","GT",
-"Max","Fire","One","Dark"
-];
-
-let result="";
-
-for(let i=0;i<10;i++){
-
-let x=a[Math.floor(Math.random()*a.length)];
-let y=b[Math.floor(Math.random()*b.length)];
-
-result+=x+y+"\\n";
-
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("darkMode", "true");
+  } else {
+    localStorage.setItem("darkMode", "false");
+  }
 }
 
-document.getElementById("names").innerText=result;
-
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark");
 }
 
-
-function profit(){
-
-let venta=Number(document.getElementById("venta").value);
-let costo=Number(document.getElementById("costo").value);
-
-if(!venta || !costo){
-
-document.getElementById("profit").innerText=
-"Escribe los dos valores.";
-
-return;
-
+function randomItem(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
 
-let ganancia=venta-costo;
+function generateName() {
 
-document.getElementById("profit").innerText=
-"Ganancia: $"+ganancia.toLocaleString("es-CO")+" COP";
+  const style = document.getElementById("nameStyle").value;
 
+  const pro1 = [
+    "Shadow",
+    "Fenix",
+    "Titan",
+    "Ghost",
+    "Hunter",
+    "Venom",
+    "Storm",
+    "Wolf"
+  ];
+
+  const pro2 = [
+    "X",
+    "Pro",
+    "Elite",
+    "King",
+    "Prime",
+    "Legend",
+    "Zero",
+    "77"
+  ];
+
+  const funny1 = [
+    "Pollo",
+    "Taco",
+    "Gato",
+    "Papa",
+    "Burro",
+    "Pato",
+    "Nacho"
+  ];
+
+  const funny2 = [
+    "Loco",
+    "Gamer",
+    "Supremo",
+    "Furioso",
+    "Master",
+    "Explosivo"
+  ];
+
+  const dark1 = [
+    "Dark",
+    "Death",
+    "Hell",
+    "Demon",
+    "Grim",
+    "Blood",
+    "Night"
+  ];
+
+  const dark2 = [
+    "Hunter",
+    "Lord",
+    "Soul",
+    "Wolf",
+    "King",
+    "X"
+  ];
+
+  let name;
+
+  if (style === "pro") {
+    name = randomItem(pro1) + randomItem(pro2);
+  }
+
+  if (style === "funny") {
+    name = randomItem(funny1) + randomItem(funny2);
+  }
+
+  if (style === "dark") {
+    name = randomItem(dark1) + randomItem(dark2);
+  }
+
+  if (style === "random") {
+    const all = pro1.concat(funny1).concat(dark1);
+    name = randomItem(all) + randomItem(pro2);
+  }
+
+  document.getElementById("nameResult").textContent = name;
 }
 
+function calculateProfit() {
 
-function password(){
+  const income =
+    parseFloat(document.getElementById("income").value) || 0;
 
-let chars=
-"ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%";
+  const expenses =
+    parseFloat(document.getElementById("expenses").value) || 0;
 
-let p="";
+  const profit = income - expenses;
 
-for(let i=0;i<16;i++){
-
-p+=chars[Math.floor(Math.random()*chars.length)];
-
+  document.getElementById("profitResult").textContent =
+    "Ganancia: $" + profit.toLocaleString("es-CO") + " COP";
 }
 
-document.getElementById("password").innerText=p;
+function generatePassword() {
 
+  let length =
+    parseInt(document.getElementById("passLength").value) || 12;
+
+  if (length < 6) length = 6;
+  if (length > 40) length = 40;
+
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
+
+  let password = "";
+
+  for (let i = 0; i < length; i++) {
+    password += chars.charAt(
+      Math.floor(Math.random() * chars.length)
+    );
+  }
+
+  document.getElementById("passwordResult").textContent = password;
 }
 
+function generateAd() {
 
-function ad(){
+  const product =
+    document.getElementById("productName").value.trim();
 
-let producto=
-document.getElementById("producto").value;
+  const price =
+    document.getElementById("productPrice").value.trim();
 
-let precio=
-document.getElementById("precio").value;
+  const feature =
+    document.getElementById("productFeature").value.trim();
 
-if(!producto){
+  if (!product) {
+    document.getElementById("adResult").textContent =
+      "Escribe el nombre del producto.";
+    return;
+  }
 
-document.getElementById("ad").innerText=
-"Escribe un producto.";
+  const text =
+`🔥 ¡OFERTA ESPECIAL!
 
-return;
+🛍️ ${product}
 
+✨ ${feature || "Excelente calidad"}
+
+💰 Precio: ${price || "Consultar"}
+
+📲 ¡Escríbeme ahora y consigue el tuyo!
+
+🚀 ¡No te quedes sin él!`;
+
+  document.getElementById("adResult").textContent = text;
 }
 
-document.getElementById("ad").innerText=
-"🔥 ¡"+producto+" disponible!\\n\\n"+
-"Excelente opción a solo "+precio+
-". Escríbeme para más información. 📩";
+function copyText(elementId) {
 
+  const element = document.getElementById(elementId);
+  const text = element.textContent;
+
+  navigator.clipboard.writeText(text).then(() => {
+
+    const oldText = element.textContent;
+
+    element.textContent = "✅ ¡Copiado!";
+
+    setTimeout(() => {
+      element.textContent = oldText;
+    }, 900);
+
+  }).catch(() => {
+    alert("No se pudo copiar automáticamente.");
+  });
 }
 
 </script>
